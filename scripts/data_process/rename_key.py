@@ -1,7 +1,7 @@
 import os
 import json
-input_path = "./all_combined.jsonl"  # Your input file
-output_path = "./all_combined_renamed.jsonl"  # Your output file
+input_path = "/home/wqi/ReST-RT/ReST-RT/data/train/all_prompts_train.jsonl"  # Your input file
+output_path = "/home/wqi/ReST-RT/ReST-RT/data/train/original.jsonl"  # Your output file
 
 with open(input_path, "r") as infile, open(output_path, "w") as outfile:
     for line in infile:
