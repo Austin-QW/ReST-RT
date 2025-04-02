@@ -73,13 +73,13 @@ def prepare_input(tokenizer, prompts):
     return input_tokens
 
 def main():
-    for ckpt in [5000,6000,6750]:
+    for ckpt in [5000]:
         print(f'----------------------{ckpt}---------------------')
-        lora_dir = f"/data1/wqi/LLaMA-Factory/saves/Qwen2.5-3B-Instruct/lora/train_2025-03-28-18-30-16/checkpoint-{ckpt}"
+        lora_dir = f"/data1/wqi/LLaMA-Factory/saves/Llama-3.2-3B-Instruct/lora/train_2025-03-31-18-45-57/checkpoint-{ckpt}"
         # model_name_or_path = '/data1/wqi/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775'
-        # model_name_or_path = '/data1/wqi/huggingface/hub/Llama-3.2-3B-Instruct'
-        model_name_or_path = '/data1/wqi/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1'
-        data_path = "/home/wqi/mitigating-reversal-curse/reversal_curse/data/reverse_experiments/june_version_7921032488/"
+        model_name_or_path = '/data1/wqi/huggingface/hub/Llama-3.2-3B-Instruct'
+        # model_name_or_path = '/data1/wqi/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1'
+        data_path = "/home/wqi/ReST-RT/ReST-RT/data/test/"
         
         tokenizer = AutoTokenizer.from_pretrained(
             model_name_or_path, padding_side="left",
